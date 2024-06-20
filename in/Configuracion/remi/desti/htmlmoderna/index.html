@@ -170,7 +170,7 @@
  
 
 		 
-                RemiSaldo = RemiSaldo.toLocaleString();
+                RemiSaldo = RemiSaldo.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
  
 		document.getElementById("sald").innerHTML = RemiSaldo;
 

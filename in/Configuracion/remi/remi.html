@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<script src="https://kit.fontawesome.com/67821f8363.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./style.css">
+		
+	</head>
+	<body>
+		<!-- partial:index.partial.html -->
+		<div id="container">
+			<div id="div1">
+				<img src="enca.jpg"></img>
+				<div id="nombree">					 
+					<span>Remitentes</span>	
+				</div>
+				
+			</div>
+			
+			<div id="content">
+				<p id="textoEnca">Aquí colocas los datos de la persona que <b>ENVÍA</b> la transferencia. Podés
+				agregar todos los perfiles que desees.</p>
+				<ul id="favorite-links">
+					
+				</ul>
+				<div id="new-link-button">
+					<button>Agregar</button>
+				</div>
+				
+			</div>
+			<div id="add-link-form">
+				
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre">
+				<br>
+				<label for="cuit">CUIT:</label>
+				<input type="number" id="cuit" placeholder="Cuit sin guiones">
+				<br>
+				<label for="cbu">CBU:</label>
+				<input type="number" oninput="validarLongitud(this)" id="cbu" value="" placeholder="CBU (22 dígitos)">
+				<br>
+				<label for="saldo">Saldo:</label>
+				<input type="text" id="saldo" value="500000">
+				<br>
+				<label for="motivo">Motivo:</label>
+				<input type="text" id="motivo" value="varios">
+				
+				<br><button id="add">Guardar</button><button id="cancel">Cancelar</button>
+			</div>
+			
+			<!-- Agrega un div para mostrar los detalles de la entrada -->
+			<div id="entry-details" style="display: none;">
+				<h3>Detalles:</h3>
+				<label for="RemiNombre-detail">Nombre:</label>
+				<input type="text" id="RemiNombre-detail" disabled>
+				<br>
+ 			    <label for="RemiCuit-detail">CUIT:</label>
+				<input type="number" id="RemiCuit-detail" placeholder="Cuit sin guiones">
+				<br>
+				<label for="RemiCbu-detail">Cbu:</label>
+				<input type="number" id="RemiCbu-detail" oninput="validarLongitud(this)">
+				<br>
+				<label for="RemiSaldo-detail">Saldo:</label>
+				<input type="text" id="RemiSaldo-detail">
+				<br>
+				<label for="RemiMotivo-detail">Motivo:</label>
+				<input type="text" id="RemiMotivo-detail">
+				<br>
+				
+				
+				<button id="guardar">Guardar</button>
+				<button id="cerrar">Cerrar</button>
+			</div>
+			
+			<div id="hora">
+				<p>Hora  </p>
+				<input type="number" id="horaInput" disabled>
+				<span style="margin-top:10px">:</span>
+				<input type="number" id="minutosInput" disabled>
+				<p id="HoraActivar" style="color:blue; font-size:12px;margin: 16px;">  (activar)</p>
+				<p id="HoraCancel" style="color:red; font-size:12px;margin: 16px;">  (cancelar)</p>
+				<p style="font-size: 12px;margin-right: 2%;">Personalizá la hora para que el comprobante tenga un horario diferente al actual.</p>
+			</div>
+
+			<div id="ayuda">
+				<div style="display: flex; padding: 5px;"> <i class="fa-solid fa-user-pen" style="margin-right: 3px; color: white;float: left; right: 0;"></i><a>Tocá sobre el nombre para realizar una transferencia desde ese remitente.</a> </div>
+				<p><i class="fa-solid fa-magnifying-glass" style="color: white;float: left; right: 0;"></i> Para ver los datos del remitente.</p>				 
+				<p><b>X</b> Para eliminar un remitente</p> 
+			</div>
+
+ 
+			
+ 
+		</div>
+		<!-- partial -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+		
+	</body>
+</html>

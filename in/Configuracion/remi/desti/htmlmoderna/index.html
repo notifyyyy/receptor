@@ -191,6 +191,9 @@
 			
 			monto = monto.replace(/,.*|[^0-9]/g, ""); 
 			document.getElementById("sald").innerHTML = Number(RemiSaldo).toLocaleString('es-ES');
+			setInterval(() => { 
+				document.getElementById("sald").innerHTML = Number(RemiSaldo).toLocaleString('es-ES');
+			}, 500); 
 			
 			//poner guiones a cuit
 			if (!DestiCuit.includes("-")) {
@@ -460,4 +463,4 @@
 			<script src="enviador.js"></script>
 			</body>
 			
-			</html>									
+			</html>												

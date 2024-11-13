@@ -1,11 +1,11 @@
- 
+
 
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400&display=swap');
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('ProximaNovaRegular.ttf') format('truetype'); 
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Proxima Nova';
+	src: url('ProximaNovaRegular.ttf') format('truetype'); 
+	font-weight: normal;
+	font-style: normal;
 }
 
 /* Estilos del spinner */
@@ -41,11 +41,11 @@ body {
 	background: linear-gradient(to top, #f1f1f1 57%, #f1f1f1 89%, #009fe3 96%);
     margin: 0; 
     min-height: 100vh; 
-	 
+	
 	
 }
 
- 
+
 
 #content {
     align-items: center;
@@ -106,61 +106,99 @@ body {
 	margin-left: 2.5%;
 	border-radius: 5px;
 	box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
-	}
+}
 
 #enc1{
 	
-display: flex;
-justify-content: space-between;
-
+	display: flex;
+	justify-content: space-between;
+	
 }
 #enc2{
-margin-top: 3%;	
+	margin-top: 3%;	
 }
 #enc3{
-margin-top: 6%;	
+	margin-top: 4%;	
+}
+.containerCR {
+    position: relative;
+    display: inline-block;
+}
+
+.pulse-container {
+    position: absolute;
+    bottom: 4.6em;
+    right: 3.8em;
+}
+
+.pulse-ring {
+    position: absolute;
+	width: 1.3em;
+    height: 1.3em;
+    border: 2px solid #0066cc;
+    border-radius: 50%;
+    animation: pulse 3s ease-out infinite;
+    opacity: 0;
+}
+
+.pulse-ring:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.pulse-ring:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+	}
+    100% {
+        transform: scale(2);
+        opacity: 0;
+	}
 }
 #enc3 img{
-width: 100%;
-
+	width: 100%;
+	
 }
 
 #img2 {
-margin-top: 4%;
-width: 100%;
-bottom: 0;
-
+	margin-top: 4%;
+	width: 100%;
+	bottom: 0;
+	
 }
 
 
 
 
 #div2 span {
-
-font-size: 14px; 
-color:black;
+	
+	font-size: 14px;  
 }
 
 
 #imgPie {
-
-width: 100%;
-position: fixed; 
-bottom: 0;
-
+	
+	width: 100%;
+	position: fixed; 
+	bottom: 0;
+	
 }
 
 .pie {
-position: fixed;
-bottom: 0;
-z-index:9999	
+	position: fixed;
+	bottom: 0;
+	z-index:9999	
 }
 .linea {
-border: 1px solid lightgray;
-margin: 5% 5%;
-width: 106.5%;
-left: -8.5%;
-position: relative;
+	border: 1px solid lightgray;
+	margin: 5% 5%;
+	width: 106.5%;
+	left: -8.5%;
+	position: relative;
 }
 
 
@@ -190,14 +228,14 @@ display: flex;
 }
 
 #icoIMG {
-	border: solid 1px #68666675;
-	border-radius: 50%;
-	letter-spacing: 1px;
-	margin-left: 5%;
-	margin-right: 7%;
-	height: 39px;
-	width: 39px;
-	object-fit: cover;
+border: solid 1px #68666675;
+border-radius: 50%;
+letter-spacing: 1px;
+margin-left: 5%;
+margin-right: 7%;
+height: 39px;
+width: 39px;
+object-fit: cover;
 }
 
 

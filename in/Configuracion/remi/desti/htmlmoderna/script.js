@@ -1,3 +1,26 @@
+
+async function obtenerTasa() {
+    try {
+	const response = await fetch('https://servicios-bd.vercel.app/get-tasa');
+        if (!response.ok) {
+            throw new Error('Error al obtener la tasa');
+        }
+        const data = await response.json();
+        console.log('Tasa obtenida:', data.tasa);
+        document.getElementById("tasa").textContent = data.tasa;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    obtenerTasa();
+});
+
+
+
+
+
 function agregarNuevaEntrada(monto, nombre, fecha, imagen, numeroEntrada) {
 	// Crear un nuevo elemento div para la nueva entrada
 	var nuevaEntrada = document.createElement("div");

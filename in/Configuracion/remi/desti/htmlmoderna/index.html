@@ -37,7 +37,7 @@
 			<div id="enc1">
 				<div id="izquierda" style="display: block ruby;">
 					<b><span id="dispon">Disponible  </span><span id="tasa"
-							style="color:#06a444;background:#27ca272b;border-radius:12px;padding-right:6%;padding-left:6%;padding-top:2%;padding-bottom:2%">▲ 31,9%</span>
+							style="color:#06a444;background:#27ca272b;border-radius:12px;padding-right:6%;padding-left:6%;padding-top:2%;padding-bottom:2%">▲ <span id="tasa">31,8</span></span>
 							<span id="tasaBr" style="display: none;"><img  src="tasaBr.jpg" style="width: 58%;position: relative;top: 2px;left: -18%;"></span>
 						</div>
 				
@@ -50,20 +50,18 @@
 			<div id="enc2">
 				<b><span id="signito" style="font-size:34px; margin-right:5px;">$</span><span id="sald"
 						style="font-size:34px;"></span><span id="dec"
-						style="font-size: 19px;margin-left: 2px;position: relative;bottom: 12px;">17</span></b>   
-				<i id="eye-icon" class="fa-regular fa-eye fa-sm" style="color: #000000;
-	background: #d3d3d370;;
-	padding: 4px;
-	border-radius: 79%;
-	bottom: 16%;
-	position: relative;
-line-height: normal;
-  vertical-align: super;"></i>
+						style="font-size: 19px;margin-left: 2px;position: relative;bottom: 12px;">36</span></b>   
+				<i id="eye-icon" class="fa-regular fa-eye fa-sm" style="color: #000000;"></i>
 			</div>
 
-			<div id="enc3">
-				<img id="img1" src="img1.jpg"></img>
-			</div>
+				<div id="enc3" class="containerCR">
+					<img id="img1" src="img1.jpg" />
+					<div class="pulse-container">
+						<div class="pulse-ring"></div>
+						<div class="pulse-ring"></div>
+						<div class="pulse-ring"></div>
+					</div>
+				</div>
 		</div>
 
 
@@ -177,8 +175,7 @@ line-height: normal;
  
 
 		 
-                RemiSaldo = RemiSaldo.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
- 
+
 		document.getElementById("sald").innerHTML = RemiSaldo;
 
 		//poner guiones a cuit
